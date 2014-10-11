@@ -62,6 +62,12 @@ int main(int argc, char *argv[])
 			exit(-1);
 			break;
 	}
+	
+	/// Some verification
+	if( gain < 1){
+		printf("Error: Gain is lower than 1");
+		exit(-1);
+	}
        	FILE * test;
 	if ( (test = fopen(audiofile, "rb")) <= 0) {
 		printf("File not found\n");
