@@ -1,0 +1,23 @@
+Revisión del ayudante:
+Felipe Acevedo, Niklas Tampier
+
+Documentación (30%):				100
+Compilación (10%):					100
+Ejecución (60%):
+* Interpretación del archivo (10%):	100
+* Gráficos (25%):					90
+* Reproducción (15%):				60
+* Índice de error (10%):			100
+-----------------------------
+Total:								
+
+Comentarios:
+* La documentación es bastante gráfica. Me gustó.
+* Compila sin ningún problema en mi computador.
+* Si se especifica offset 0 no se grafica nada.
+* Al usar el parámetro p no se reproducen los audios completos. El audio arreglado (fixed) no se escucha, y el original no es detectado. Sin embargo este último error es fácilmente arreglable cambiando en la línea 153 "original" por "audio".
+
+Notas aparte:
+* Usaron bastantes líneas de Octave. Un truco que se puede usar para no tener que definir tantas líneas de fprintf es hacer un solo string en un .h y ejecutar sucesivas veces la función strtok() en un loop.
+* Al principio usaron sprintf en una cadena de 30 caracteres. Dado que usaron esas cadenas para longitudes conocidas (carpeta /tmp) está bien, pero les recomiendo que vean la función asprintf(), permite hacer un printf(), reservando la memoria justa en el heap.
+* No liberaron memoria, cuidado con eso.
